@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //EditText editBox = new EditText(getContext());
-        editBox.setText("boop");
+        //editBox.setText("boop");
 
         setContentView(R.layout.activity_main);
 
