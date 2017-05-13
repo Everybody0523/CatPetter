@@ -26,6 +26,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public volatile float [] mColor = { 0.1844f, 0.9795f, 0.7663f ,1.0f };
+    public volatile float [] dColor = { 0.1844f, 0.9795f, 0.7663f ,1.0f };
 
     float triangleCoords[] = {   // in counterclockwise order:
             0.0f,  0.0f, 0.0f, // top
@@ -36,6 +37,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     float button1Coords[] = {0,-0.7f,0.1f,0.1f};
     float button2Coords[] = {0,-0.4f,0.1f,0.1f};
+    float display[] = {0, 0.7f, 0.1f,0.1f};
     float circleCoords[] = {0,0,0.4f,0.4f};
 
     private Triangle mTriangle;
@@ -53,6 +55,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     private Circle   button1;
     private Circle   button2;
+    private Circle   displayButton;
 
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
 
@@ -66,6 +69,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         button1 = new Circle(button1Coords, mColor);
         button2 = new Circle(button2Coords, mColor);
+        displayButton = new Circle(display, dColor);
 
         mCircle = new Circle(circleCoords, turquoise);
 
@@ -177,6 +181,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         button1.setColor(mColor);
         button1.draw(emptyMatrix);
 
+        displayButton.setColor(dColor);
+        displayButton.draw(emptyMatrix);
+
     }
 
     // mMVPMatrix is an abbreviation for "Model View Projection Matrix"
@@ -252,6 +259,14 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public void setCur(int cur) {
         mCurSprite = cur;
+    }
+
+    public float [] getdColor() {
+        return dColor;
+    }
+
+    public void setdColor(float [] color) {
+        dColor = color;
     }
 
 }
