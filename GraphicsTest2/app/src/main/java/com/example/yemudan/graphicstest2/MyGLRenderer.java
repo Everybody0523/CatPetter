@@ -28,8 +28,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mActivityContext = activityContext;
     }
 
-    public volatile float [] mColor = { 0.1844f, 0.9795f, 0.7663f ,1.0f };
-    public volatile float [] dColor = { 0.5844f, 0.9795f, 0.7663f ,1.0f };
+    public volatile float [] upColor = { 0.8844f, 0.9795f, 0.7663f ,1.0f };
+    public volatile float [] downColor = { 0.6844f, 0.9795f, 0.7663f ,1.0f };
+    public volatile float [] dColor = { 0.6844f, 0.9795f, 0.7663f ,1.0f };
 
     float triangleCoords[] = {   // in counterclockwise order:
             0.0f,  0.0f, 0.0f, // top
@@ -70,8 +71,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         //mTriangle = new Triangle(triangleCoords, turquoise);
         //mCircle = new Circle(circleCoords, turquoise);
 
-        button1 = new Circle(button1Coords, mColor);
-        button2 = new Circle(button2Coords, mColor);
+        button1 = new Circle(button1Coords, upColor);
+        button2 = new Circle(button2Coords, downColor);
         displayButton = new Circle(display, dColor);
 
         mCircle = new Circle(circleCoords, turquoise);
@@ -181,10 +182,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mRightEye.draw(scratch);
         */
 
-        button2.setColor(mColor);
+        //button2.setColor(downColor);
         button2.draw(emptyMatrix);
 
-        button1.setColor(dColor);
+        //button1.setColor(upColor);
         button1.draw(emptyMatrix);
 
         displayButton.setColor(dColor);
@@ -263,12 +264,12 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mYDist = ydist;
     }
 
-    public float [] getColor() {
-        return mColor;
+    public float [] getupColor() {
+        return upColor;
     }
 
-    public void setColor(float [] color) {
-        mColor = color;
+    public void setupColor(float [] color) {
+        upColor = color;
     }
 
     public int getCur() {
@@ -285,6 +286,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public void setdColor(float [] color) {
         dColor = color;
+    }
+
+    public float [] getDownColor() {
+        return upColor;
     }
 
 }
