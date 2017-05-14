@@ -5,6 +5,7 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.os.SystemClock;
+import android.util.Log;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -18,6 +19,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private Sprite sprite;
     private Sprite sprite2;
 
+    public ScoreBoard board;
+
     public volatile int mCurSprite = 1;
 
     public MyGLRenderer(final Context activityContext)
@@ -26,7 +29,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public volatile float [] mColor = { 0.1844f, 0.9795f, 0.7663f ,1.0f };
-    public volatile float [] dColor = { 0.1844f, 0.9795f, 0.7663f ,1.0f };
+    public volatile float [] dColor = { 0.5844f, 0.9795f, 0.7663f ,1.0f };
 
     float triangleCoords[] = {   // in counterclockwise order:
             0.0f,  0.0f, 0.0f, // top
@@ -35,9 +38,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     };
     float turquoise[] = { 0.1844f, 0.9795f, 0.7663f ,1.0f };
 
-    float button1Coords[] = {0,-0.7f,0.1f,0.1f};
-    float button2Coords[] = {0,-0.4f,0.1f,0.1f};
-    float display[] = {0, 0.7f, 0.1f,0.1f};
+    float button1Coords[] = {0,-0.8f,0.1f,0.1f};
+    float button2Coords[] = {0,-0.5f,0.1f,0.1f};
+    float display[] = {0, 0.5f, 0.1f,0.1f};
     float circleCoords[] = {0,0,0.4f,0.4f};
 
     private Triangle mTriangle;
@@ -61,7 +64,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
 
         // Set the background frame color
-        GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        GLES20.glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
         // initialize a triangle
         //mTriangle = new Triangle(triangleCoords, turquoise);
@@ -97,6 +100,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         sprite2 = new Sprite(mActivityContext, R.drawable.pusheenicorn);
         sprite = new Sprite(mActivityContext, R.drawable.pusheensits);
+
+        board = new ScoreBoard();
+
     }
 
     private float[] mRotationMatrix = new float[16];
@@ -178,11 +184,23 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         button2.setColor(mColor);
         button2.draw(emptyMatrix);
 
-        button1.setColor(mColor);
+        button1.setColor(dColor);
         button1.draw(emptyMatrix);
 
         displayButton.setColor(dColor);
         displayButton.draw(emptyMatrix);
+
+        /*
+        for (Circle e : board.circles){
+            e.draw(emptyMatrix);
+        }*/
+
+
+        for (int j=0; j<10; j++){
+            board.circles[j].draw(emptyMatrix);
+            //Log.d("x should be:", String.valueOf(board.circles[j].getX()));
+        }
+
 
     }
 

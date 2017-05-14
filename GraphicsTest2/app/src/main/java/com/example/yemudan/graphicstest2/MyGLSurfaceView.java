@@ -119,11 +119,11 @@ class MyGLSurfaceView extends GLSurfaceView {
                 if (x < getWidth()/2+getWidth()/2*0.1f && x > getWidth()/2-getWidth()/2*0.1f
                         && y > getHeight()/2+getHeight()/2*0.6f && y < getHeight()/2+getHeight()/2*0.8f){
 
-                        mRenderer.setColor(turquoise2);
+                        //mRenderer.setColor(turquoise2);
                         mRenderer.setCur(1);
                         i = floor(random()*2);
                         colorSetter(i);
-                        Log.d("detected i:", String.valueOf(i));
+                        //Log.d("detected i:", String.valueOf(i));
                         requestRender();
                     //Log.d("detected x:", String.valueOf(x));
                 }
@@ -131,7 +131,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                 if (x < getWidth()/2+getWidth()/2*0.1f && x > getWidth()/2-getWidth()/2*0.1f
                         && y > getHeight()/2+getHeight()/2*0.3f && y < getHeight()/2+getHeight()/2*0.5f){
 
-                    mRenderer.setColor(turquoise);
+                    //mRenderer.setColor(turquoise);
                     mRenderer.setCur(2);
                     i = floor(random()*2);
                     colorSetter(i);

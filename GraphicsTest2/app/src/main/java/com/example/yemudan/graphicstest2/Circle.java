@@ -191,4 +191,9 @@ public class Circle {
 
     }
 
+    public float getX(){
+        return CircleCoords[0];
+    }
+
+
 }
