@@ -100,8 +100,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mSquare = new Square();
 
 
-        sprite2 = new Sprite(mActivityContext, R.drawable.smile);
-        sprite = new Sprite(mActivityContext, R.drawable.frown);
+        sprite2 = new Sprite(mActivityContext, R.drawable.catfrown);
+        sprite = new Sprite(mActivityContext, R.drawable.catsmile);
 
         board = new ScoreBoard();
 
