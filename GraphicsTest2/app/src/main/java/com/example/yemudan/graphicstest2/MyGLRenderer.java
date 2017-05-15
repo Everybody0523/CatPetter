@@ -29,9 +29,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mActivityContext = activityContext;
     }
 
-    public volatile float [] upColor = { 0.8844f, 0.9795f, 0.7663f ,1.0f };
+    public volatile float [] upColor = { 0.7844f, 0.9795f, 0.7663f ,1.0f };
     public volatile float [] downColor = { 0.6844f, 0.9795f, 0.7663f ,1.0f };
-    public volatile float [] dColor = { 0.6844f, 0.9795f, 0.7663f ,1.0f };
+    public volatile float [] dColor = { 0.7844f, 0.9795f, 0.7663f ,1.0f };
 
     float triangleCoords[] = {   // in counterclockwise order:
             0.0f,  0.0f, 0.0f, // top
