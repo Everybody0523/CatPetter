@@ -6,6 +6,7 @@ import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.os.SystemClock;
 import android.util.Log;
+import android.webkit.DownloadListener;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -289,7 +290,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public float [] getDownColor() {
-        return upColor;
+        return downColor;
     }
 
 }

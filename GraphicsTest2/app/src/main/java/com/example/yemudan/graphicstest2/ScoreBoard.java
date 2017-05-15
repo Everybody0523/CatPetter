@@ -23,9 +23,7 @@ public class ScoreBoard{
         while (i < 11) {
             float x = -0.55f + 0.1f*i;
             float display[] = {x, 0.7f, 0.05f,0.05f};
-            Circle e = new Circle(display, turquoise2);
-            circles[i-1] = e;
-            //circles[i]=e;
+            circles[i-1] = new Circle(display, turquoise2);
             i += 1;
         }
     }
