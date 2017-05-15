@@ -19,6 +19,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private final Context mActivityContext;
     private Sprite sprite;
     private Sprite sprite2;
+    private Sprite sprite3;
 
     public ScoreBoard board;
 
@@ -99,7 +100,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         // initialize a square
         mSquare = new Square();
 
-
+        sprite3 = new Sprite(mActivityContext, R.drawable.goodojobu);
         sprite2 = new Sprite(mActivityContext, R.drawable.catfrown);
         sprite = new Sprite(mActivityContext, R.drawable.catsmile);
 
@@ -165,13 +166,16 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         //mTriangle.draw(mMVPMatrix);
         //sprite.Draw(mMVPMatrix);
 
-        if (mCurSprite == 1){
-            sprite.Draw(scratch);
+        if (board.score > 9){
+            sprite3.Draw(scratch);
         }
-        else{
-            sprite2.Draw(scratch);
+        else {
+            if (mCurSprite == 1) {
+                sprite.Draw(scratch);
+            } else {
+                sprite2.Draw(scratch);
+            }
         }
-
         //mCircle.draw(emptyMatrix);
 
         /*
