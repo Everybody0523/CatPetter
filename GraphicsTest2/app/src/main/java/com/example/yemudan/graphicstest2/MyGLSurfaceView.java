@@ -77,25 +77,11 @@ class MyGLSurfaceView extends GLSurfaceView {
         float y = e.getY();
 
         switch (e.getAction()) {
+            /*
             case MotionEvent.ACTION_MOVE:
 
                 float dx = x - mPreviousX;
                 float dy = y - mPreviousY;
-
-
-                /*
-                // reverse direction of rotation above the mid-line
-                if (y > getHeight() / 2) {
-                    dx = dx * -1 ;
-                }
-
-                // reverse direction of rotation to left of the mid-line
-                if (x < getWidth() / 2) {
-                    dy = dy * -1 ;
-                }
-                */
-
-
 
 
                 float translateFactor = 0.001f;
@@ -111,13 +97,13 @@ class MyGLSurfaceView extends GLSurfaceView {
                                 ((dx + dy) * TOUCH_SCALE_FACTOR));
                 requestRender();
 
-
+            */
             case MotionEvent.ACTION_DOWN:
 
 
 
                 if (x < getWidth()/2+getWidth()/2*0.1f && x > getWidth()/2-getWidth()/2*0.1f
-                        && y > getHeight()/2+getHeight()/2*0.6f && y < getHeight()/2+getHeight()/2*0.8f){
+                        && y > getHeight()/2+getHeight()/2*0.7f && y < getHeight()/2+getHeight()/2*0.9f){
 
                         //mRenderer.setColor(turquoise2);
                         if (mRenderer.getdColor().equals(mRenderer.getupColor())){
@@ -134,7 +120,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                 }
 
                 if (x < getWidth()/2+getWidth()/2*0.1f && x > getWidth()/2-getWidth()/2*0.1f
-                        && y > getHeight()/2+getHeight()/2*0.3f && y < getHeight()/2+getHeight()/2*0.5f){
+                        && y > getHeight()/2+getHeight()/2*0.4f && y < getHeight()/2+getHeight()/2*0.6f){
 
                     //mRenderer.setColor(turquoise);
                     if (mRenderer.getdColor().equals(mRenderer.getDownColor())){
