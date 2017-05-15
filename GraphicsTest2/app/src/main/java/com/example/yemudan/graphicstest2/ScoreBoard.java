@@ -35,7 +35,10 @@ public class ScoreBoard{
             else {
                 circles[score].setColor(turquoise2);
             }
-            score += i;
+        }
+        score += i;
+        if (score < 0) {
+            score = 0;
         }
     }
 }
