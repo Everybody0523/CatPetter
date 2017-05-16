@@ -1,10 +1,4 @@
-package com.example.yemudan.graphicstest2;
-
-import android.opengl.GLSurfaceView;
-import android.opengl.GLES20;
-import android.util.Log;
-
-import java.util.ArrayList;
+package catcolor.example.yemudan.graphicstest2;
 
 /**
  * Created by wmf41 on 5/13/2017.

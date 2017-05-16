@@ -1,4 +1,4 @@
-package com.example.yemudan.graphicstest2;
+package catcolor.example.yemudan.graphicstest2;
 
 import android.opengl.GLES20;
 import android.util.Log;

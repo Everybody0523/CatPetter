@@ -1,4 +1,4 @@
-package com.example.yemudan.graphicstest2;
+package catcolor.example.yemudan.graphicstest2;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

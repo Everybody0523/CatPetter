@@ -1,15 +1,11 @@
-package com.example.yemudan.graphicstest2;
+package catcolor.example.yemudan.graphicstest2;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.widget.EditText;
 
-import static java.lang.Math.PI;
-import static java.lang.Math.floor;
 import static java.lang.Math.random;
 
 /**

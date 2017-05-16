@@ -1,12 +1,10 @@
-package com.example.yemudan.graphicstest2;
+package catcolor.example.yemudan.graphicstest2;
 
 import android.content.Context;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.os.SystemClock;
-import android.util.Log;
-import android.webkit.DownloadListener;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
