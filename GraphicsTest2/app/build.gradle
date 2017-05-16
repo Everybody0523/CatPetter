@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
-        applicationId "com.example.yemudan.graphicstest2"
+        applicationId "com.cat.yemudan.graphicstest2"
         minSdkVersion 17
         targetSdkVersion 25
         versionCode 1

@@ -1,4 +1,4 @@
-package catcolor.example.yemudan.graphicstest2;
+package catcolor.cat.yemudan.graphicstest2;
 
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;

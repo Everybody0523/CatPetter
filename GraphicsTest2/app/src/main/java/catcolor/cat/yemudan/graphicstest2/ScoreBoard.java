@@ -1,4 +1,4 @@
-package catcolor.example.yemudan.graphicstest2;
+package catcolor.cat.yemudan.graphicstest2;
 
 /**
  * Created by wmf41 on 5/13/2017.

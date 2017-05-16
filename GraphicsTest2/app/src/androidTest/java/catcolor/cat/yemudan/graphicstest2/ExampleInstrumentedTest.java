@@ -1,4 +1,4 @@
-package catcolor.example.yemudan.graphicstest2;
+package catcolor.cat.yemudan.graphicstest2;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.yemudan.graphicstest2", appContext.getPackageName());
+        assertEquals("com.cat.yemudan.graphicstest2", appContext.getPackageName());
     }
 }

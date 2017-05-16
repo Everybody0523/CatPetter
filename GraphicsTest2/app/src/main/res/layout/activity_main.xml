@@ -8,7 +8,7 @@
 
 
 
-    <catcolor.example.yemudan.graphicstest2.MyGLSurfaceView
+    <catcolor.cat.yemudan.graphicstest2.MyGLSurfaceView
         android:id = "@+id/myGLSurfaceView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
