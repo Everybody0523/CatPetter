@@ -16,7 +16,7 @@ import static java.lang.Math.random;
  * Created by Yemudan on 2017-05-04.
  */
 
-class MyGLSurfaceView extends GLSurfaceView {
+public class MyGLSurfaceView extends GLSurfaceView {
 
     MyGLRenderer mRenderer;
     //float [] turquoise = { 0.6844f, 0.9795f, 0.7663f ,1.0f };
